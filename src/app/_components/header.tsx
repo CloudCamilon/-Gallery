@@ -10,20 +10,20 @@ import { JSX } from "react";
 import Image from "next/image";
 
 type HeaderItem =
-  | "HOME"
-  | "ARTISTS"
-  | "EXHIBITIONS"
-  | "ABOUT"
-  | "SHOP"
-  | "CONTACT";
+  | "Home"
+  | "Artists"
+  | "Exihibitions"
+  | "About"
+  | "Shop"
+  | "Contact";
 
 const HeaderItems = [
-  { title: "HOME", link: "/" },
-  { title: "ARTISTS", link: "/artists" },
-  { title: "EXHIBITIONS", link: "/" },
-  { title: "ABOUT", link: "/" },
-  { title: "SHOP", link: "/" },
-  { title: "CONTACT", link: "/" },
+  { title: "Home", link: "/" },
+  { title: "Artists", link: "/artists" },
+  { title: "Exihibitions", link: "/" },
+  { title: "About", link: "/" },
+  { title: "Shop", link: "/" },
+  { title: "Contact", link: "/" },
 ];
 
 const HeaderItem = ({
@@ -39,11 +39,9 @@ const HeaderItem = ({
     <Link href={link}>
       <div
         className={`
-            px-2
-        text-xs
-          ${
-            selected ? "font-bold hover:underline" : "font-normal"
-          } cursor-pointer`}
+      
+          text-xs 
+          ${selected ? "font-bold underline" : "font-normal"} cursor-pointer`}
       >
         {title}
       </div>
@@ -53,8 +51,8 @@ const HeaderItem = ({
 
 export default function Header({ selected }: { selected: HeaderItem }) {
   return (
-    <div className="flex bg-white justify-between sticky z-50  top-0 w-page h-[120px] px-20 items-center">
-      <div className="flex ">
+    <div className="flex bg-white justify-between sticky z-50 top-0 w-page h-[120px] pl-6 sm:pl-20 pr-20 items-center">
+      <div className="flex">
         <Image
           src={"./+gallery.svg"}
           alt={"+Gallery Logo"}
@@ -62,7 +60,7 @@ export default function Header({ selected }: { selected: HeaderItem }) {
           height={20}
         />
       </div>
-      <div className=" flex flex-row gap-6">
+      <div className="hidden sm:flex flex-wrap flex-row gap-6">
         {HeaderItems.map((item, index) => (
           <HeaderItem
             key={index}
