@@ -94,7 +94,7 @@ export default function Home() {
                     subtitle={item.subtitle}
                     details={item.details}
                     url={item.url}
-                    height={222}
+                    thin={true}
                   />
                 );
               })}
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-center mt-40">
           <div className="w-[80%] text-center text-2xl">Featured</div>
-          <div className="mt-8 lg:px-20 xl:px-0">
+          <div className="mt-8 lg:px-0">
             <div className="sm:px-4 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {FEATURED.map((item, index) => {
                 if (index > 3 && width <= 425) return null;
@@ -116,7 +116,7 @@ export default function Home() {
                     title={item.title}
                     subtitle={item.subtitle}
                     url={item.url}
-                    height={178}
+                    thin={false}
                   />
                 );
               })}

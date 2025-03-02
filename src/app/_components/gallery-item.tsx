@@ -13,7 +13,7 @@ interface GalleryItemProp {
   subtitle: string;
   details?: string;
   url: string;
-  height: number;
+  thin: boolean;
 }
 
 export default function GalleryItem({
@@ -21,12 +21,16 @@ export default function GalleryItem({
   subtitle,
   details,
   url,
-  height,
+  thin,
 }: GalleryItemProp): JSX.Element {
   return (
     <div className="gap-2 flex flex-col cursor-pointer">
-      <div className={`relative w-[full] h-[${height}] md:h-[275]`}>
-        <Image layout="fill" objectFit="cover" src={url} alt="Earnest" />
+      <div
+        className={`relative w-full ${
+          thin ? "h-[222px]" : "h-[178px]"
+        } md:h-[275px]`}
+      >
+        <Image fill style={{ objectFit: "cover" }} src={url} alt="Earnest" />
       </div>
       <div className="text-sm font-urbanist font-bold uppercase">{title}</div>
       <div className="text-sm font-urbanist">{subtitle}</div>
