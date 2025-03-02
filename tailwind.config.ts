@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['var(--font-work-sans)', 'work-sans'], 
+        urbanist: ['var(--font-urbanist)', 'urbanist']
+      },
     },
   },
   plugins: [],
