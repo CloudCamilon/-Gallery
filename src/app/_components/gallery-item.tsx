@@ -10,10 +10,10 @@ import Image from "next/image";
 
 interface GalleryItemProp {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   details?: string;
   url: string;
-  thin: boolean;
+  mode: "exhibition" | "featured" | "artists";
 }
 
 export default function GalleryItem({
@@ -21,15 +21,28 @@ export default function GalleryItem({
   subtitle,
   details,
   url,
-  thin,
+  mode,
 }: GalleryItemProp): JSX.Element {
+  const itemHeight = () => {
+    let heightClassName = "";
+    switch (mode) {
+      case "artists":
+        heightClassName = "h-[206px]";
+        break;
+      case "exhibition":
+        heightClassName = "h-[222px]";
+        break;
+      case "featured":
+        heightClassName = "h-[178px]";
+        break;
+      default:
+        heightClassName = "h-[206px]";
+    }
+    return heightClassName;
+  };
   return (
     <div className="gap-2 flex flex-col cursor-pointer">
-      <div
-        className={`relative w-full ${
-          thin ? "h-[222px]" : "h-[178px]"
-        } md:h-[275px]`}
-      >
+      <div className={`relative w-full ${itemHeight()} md:h-[275px]`}>
         <Image fill style={{ objectFit: "cover" }} src={url} alt="Earnest" />
       </div>
       <div className="text-sm font-urbanist font-bold uppercase">{title}</div>

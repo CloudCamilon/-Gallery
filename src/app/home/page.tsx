@@ -76,7 +76,7 @@ export default function Home() {
   const { width } = useDebouncedResize();
 
   return (
-    <div className="">
+    <div>
       <Header selected="Home" />
       <div className="flex flex-col px-6 py-10">
         <div className="flex flex-col justify-center items-center">
@@ -94,7 +94,7 @@ export default function Home() {
                     subtitle={item.subtitle}
                     details={item.details}
                     url={item.url}
-                    thin={true}
+                    mode={"exhibition"}
                   />
                 );
               })}
@@ -116,7 +116,7 @@ export default function Home() {
                     title={item.title}
                     subtitle={item.subtitle}
                     url={item.url}
-                    thin={false}
+                    mode={"featured"}
                   />
                 );
               })}
