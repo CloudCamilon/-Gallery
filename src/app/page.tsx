@@ -12,7 +12,8 @@ import Header from "./_components/header";
 export default function App() {
   return (
     <div className="bg-white px-0 2xl:px-[640px] text-black ">
-      <Home selected="Home" />
+      <Header selected="Home" />
+      <Footer selected="Home" />
     </div>
   );
 }
