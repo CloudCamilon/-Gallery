@@ -5,7 +5,6 @@
  * authors: @vcamilon || @rjacobo
  */
 
-import Home from "./home/page";
 import Footer from "./_components/footer";
 import Header from "./_components/header";
 
