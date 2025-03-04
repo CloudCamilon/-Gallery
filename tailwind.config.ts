@@ -4,6 +4,7 @@ export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -15,6 +16,10 @@ export default {
       },
       screens: {
         xs: "430px", //Custom breakpoint for 430px
+      },
+      fontFamily: {
+        sans: ['var(--font-work-sans)', 'work-sans'], 
+        urbanist: ['var(--font-urbanist)', 'urbanist']
       },
     },
   },

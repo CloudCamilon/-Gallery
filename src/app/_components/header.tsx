@@ -54,7 +54,7 @@ export default function Header({ selected }: { selected: HeaderItem }) {
     <div className="flex bg-white justify-between sticky z-50 top-0 w-page h-[120px] pl-6 sm:pl-20 pr-20 items-center">
       <div className="flex">
         <Image
-          src={"./+gallery.svg"}
+          src={"./logo/+gallery.svg"}
           alt={"+Gallery Logo"}
           width={80}
           height={20}
