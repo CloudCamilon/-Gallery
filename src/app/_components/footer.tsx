@@ -38,7 +38,7 @@ const FooterItem = ({
     <Link href={link}>
       <div
         className={`
-      
+          text-xs
           ${selected && "font-normal"} cursor-pointer`}
       >
         {title}
@@ -55,7 +55,7 @@ export default function Footer({
   return (
     <div className="w-page bg-[#F2F2F2] p-20">
       <div className="sm:flex gap-6">
-        <div className="flex-col text-customGray xs:text-black">
+        <div className="flex-col text-customGray xs:text-black gap-1 flex sm:flex">
           {FooterItems.map((item, index) => (
             <FooterItem
               key={index}
@@ -66,13 +66,13 @@ export default function Footer({
           ))}
         </div>
         <div className="sm:flex flex-col mt-10 xs:mt-0">
-          <p className="pb-1">Contact Us</p>
-          <p className="text-sm">info@plusgallery.com</p>
-          <p className="text-sm">
+          <p className="pb-1 text-md">Contact Us</p>
+          <p className="text-xs">info@plusgallery.com</p>
+          <p className="text-xs">
             123 Santolan Street, Katipunan Ave, Quezon City, Metro Manila, 1500,
             Philippines
           </p>
-          <p className="pt-8">Follow Us</p>
+          <p className="pt-8 text-md">Follow Us</p>
           <div className="gap-2 flex">
             <Image
               src={"./instagram.svg"}
@@ -90,17 +90,17 @@ export default function Footer({
         </div>
       </div>
       <div className="flex gap-4 pt-20 justify-between w-page flex-col xs:flex-row ">
-        <div className="flex">
-          <p className="text-sm">
+        <div className="flex gap-6 flex-col xl:flex-row">
+          <p className="text-xs">
             All images on +GALLERY are approved by the artist.
           </p>
-        </div>
-        <div className="md:hidden">
-          <p className="text-sm text-[#515151]">Terms and Conditions</p>
-          <p className="text-sm text-[#515151] pt-2">Privacy Policy</p>
+          <div className="sm:hidden xl:flex xl:flex-row xl:gap-6">
+            <p className="text-xs text-[#515151] pb-4">Terms and Conditions</p>
+            <p className="text-xs text-[#515151]">Privacy Policy</p>
+          </div>
         </div>
         <div className="flex">
-          <p className="text-sm">©2025 +Gallery - all rights reserved.</p>
+          <p className="text-xs">©2025 +Gallery - all rights reserved.</p>
         </div>
       </div>
     </div>

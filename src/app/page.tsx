@@ -5,14 +5,12 @@
  * authors: @vcamilon || @rjacobo
  */
 
-import Footer from "./_components/footer";
-import Header from "./_components/header";
+import Home from "./home/page";
 
 export default function App() {
   return (
     <div className="bg-white px-0 2xl:px-[640px] text-black ">
-      <Header selected="Home" />
-      <Footer selected="Home" />
+      <Home />
     </div>
   );
 }
