@@ -10,6 +10,7 @@
 import Header from "../_components/header";
 import useDebouncedResize from "../hooks/useDebouncedResize";
 import GalleryItem from "../_components/gallery-item";
+import Footer from "../_components/footer";
 
 const EXHIBITIONS = [
   {
@@ -124,6 +125,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer selected="Home" />
     </div>
   );
 }

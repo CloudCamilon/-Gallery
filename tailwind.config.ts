@@ -12,6 +12,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customGray: "#515151", // Adding custom gray color
+      },
+      screens: {
+        xs: "430px", //Custom breakpoint for 430px
       },
       fontFamily: {
         sans: ['var(--font-work-sans)', 'work-sans'], 
